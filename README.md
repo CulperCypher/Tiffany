@@ -15,7 +15,7 @@ This project serves as a demo of how to launch a simple, trustworthy online pres
 ---
 
 ## 🚀 Live Site
-👉 **Visit the live site:** [https://yourusername.github.io/trusted-senior-moves](https://yourusername.github.io/trusted-senior-moves)  
+👉 **Visit the live site:** [https://trustedseniormoves.com](https://trustedseniormoves.com) 
 *(Replace this link after publishing your GitHub Pages site.)*
 
 ---
