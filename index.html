@@ -7,7 +7,7 @@
 
   <!-- Primary SEO -->
   <link rel="canonical" href="https://trustedseniormoves.com/" />
-  <meta name="description" content="Trusted guidance for families selling a senior’s home and transitioning into assisted living. Free checklist and local resources." />
+  <meta name="description" content="Trusted guidance for families selling a senior's home and transitioning into assisted living. Free checklist and local resources." />
 
   <!-- Open Graph (Facebook, iMessage, LinkedIn) -->
   <meta property="og:type" content="website" />
@@ -24,7 +24,7 @@
   <meta name="twitter:description" content="Compassionate, practical steps to sell the home and transition into assisted living. Free checklist." />
   <meta name="twitter:image" content="https://trustedseniormoves.com/Logo.png" />
 
-  <!-- Brand basics (optional but nice) -->
+  <!-- Brand basics -->
   <link rel="icon" href="/favicon.ico" />
   <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
   <meta name="theme-color" content="#283e62" />
@@ -45,84 +45,301 @@
   </script>
 
   <style>
-    body{font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
-         margin:0;padding:0;background:#f6f7fa;color:#222;}
-    header{background:#283e62;color:#fff;text-align:center;padding:40px 20px;}
-    header h1{margin:10px 0 0;font-size:26px;}
-    header p{margin:10px 0 0;font-size:18px;opacity:0.9;}
-    main{max-width:760px;margin:40px auto;padding:0 20px;}
-    .card{background:#fff;border-radius:12px;box-shadow:0 8px 24px rgba(0,0,0,0.06);
-          padding:28px;margin-bottom:24px;}
-    h2{margin-top:0;font-size:22px;color:#283e62;}
-    p.lead{font-size:18px;line-height:1.5;}
-    ul{margin:16px 0;padding-left:20px;}
-    footer{text-align:center;padding:30px 20px;font-size:14px;color:#777;}
-    a{color:#283e62;text-decoration:none;} a:hover{text-decoration:underline;}
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f6f7fa;
+      color: #222;
+      line-height: 1.6;
+    }
+
+    /* Header with responsive layout */
+    header {
+      background: #283e62;
+      color: #fff;
+      padding: 20px;
+    }
+
+    .header-container {
+      max-width: 1200px;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 20px;
+    }
+
+    .logo-wrapper {
+      flex-shrink: 0;
+    }
+
+    .logo-wrapper img {
+      height: 80px;
+      width: auto;
+      display: block;
+    }
+
+    .header-text {
+      flex: 1;
+      text-align: center;
+    }
+
+    .header-text h1 {
+      margin: 0;
+      font-size: 28px;
+      font-weight: 600;
+    }
+
+    .header-text p {
+      margin: 8px 0 0;
+      font-size: 16px;
+      opacity: 0.95;
+    }
+
+    /* Mobile responsive header */
+    @media (max-width: 768px) {
+      .header-container {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      .logo-wrapper img {
+        height: 70px;
+      }
+
+      .header-text h1 {
+        font-size: 22px;
+      }
+
+      .header-text p {
+        font-size: 15px;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .logo-wrapper img {
+        height: 60px;
+      }
+
+      .header-text h1 {
+        font-size: 20px;
+      }
+
+      .header-text p {
+        font-size: 14px;
+      }
+    }
+
+    /* Main content */
+    main {
+      max-width: 800px;
+      margin: 40px auto;
+      padding: 0 20px;
+    }
+
+    .card {
+      background: #fff;
+      border-radius: 12px;
+      box-shadow: 0 8px 24px rgba(0, 0, 0, 0.06);
+      padding: 32px;
+      margin-bottom: 24px;
+    }
+
+    @media (max-width: 480px) {
+      .card {
+        padding: 24px 20px;
+      }
+    }
+
+    h2 {
+      margin-top: 0;
+      font-size: 24px;
+      color: #283e62;
+      font-weight: 600;
+      line-height: 1.3;
+    }
+
+    @media (max-width: 480px) {
+      h2 {
+        font-size: 20px;
+      }
+    }
+
+    p.lead {
+      font-size: 18px;
+      line-height: 1.6;
+      color: #444;
+    }
+
+    @media (max-width: 480px) {
+      p.lead {
+        font-size: 16px;
+      }
+    }
+
+    ul {
+      margin: 20px 0;
+      padding-left: 24px;
+    }
+
+    ul li {
+      margin-bottom: 12px;
+      font-size: 16px;
+      line-height: 1.5;
+    }
+
+    .cta-button {
+      display: inline-block;
+      background: #283e62;
+      color: #fff;
+      padding: 14px 28px;
+      border-radius: 8px;
+      font-size: 16px;
+      font-weight: 500;
+      text-decoration: none;
+      transition: background 0.3s ease, transform 0.1s ease;
+      margin-top: 8px;
+    }
+
+    .cta-button:hover {
+      background: #1f2f4a;
+      text-decoration: none;
+      transform: translateY(-1px);
+    }
+
+    .cta-button:active {
+      transform: translateY(0);
+    }
+
+    @media (max-width: 480px) {
+      .cta-button {
+        display: block;
+        text-align: center;
+        width: 100%;
+      }
+    }
+
+    .disclaimer {
+      font-size: 14px;
+      color: #777;
+      margin-top: 16px;
+      line-height: 1.5;
+    }
+
+    footer {
+      text-align: center;
+      padding: 40px 20px;
+      font-size: 14px;
+      color: #777;
+      border-top: 1px solid #e0e0e0;
+      margin-top: 40px;
+    }
+
+    footer a {
+      color: #283e62;
+      text-decoration: none;
+    }
+
+    footer a:hover {
+      text-decoration: underline;
+    }
+
+    /* Accessibility improvements */
+    a:focus,
+    button:focus {
+      outline: 2px solid #283e62;
+      outline-offset: 2px;
+    }
+
+    /* Print styles */
+    @media print {
+      header {
+        background: #fff;
+        color: #000;
+      }
+      
+      .card {
+        box-shadow: none;
+        border: 1px solid #ddd;
+      }
+    }
   </style>
 </head>
 <body>
-  <!-- TOP BAR WITH LOGO LEFT -->
-<header style="
-  background:#283e62;
-  color:#fff;
-  display:flex;
-  align-items:center;
-  justify-content:center;
-  position:relative;
-  padding:20px;">
-  
-  <!-- logo left -->
-  <div style="position:absolute; left:20px; top:50%; transform:translateY(-50%);">
-    <img src="/Logo.png" alt="Trusted Senior Moves Logo" style="height:100px;width:auto;">
-  </div>
-
-  <!-- text centered -->
-  <div style="text-align:center;">
-    <h1 style="margin:0;font-size:26px;">Trusted Senior Moves</h1>
-    <p style="margin:4px 0 0;font-size:18px;opacity:0.9;">
-      Helping seniors and families make the next move with confidence.
-    </p>
-  </div>
-</header>
-
-
-
+  <!-- Responsive Header -->
+  <header>
+    <div class="header-container">
+      <div class="logo-wrapper">
+        <img src="/Logo.png" alt="Trusted Senior Moves Logo">
+      </div>
+      <div class="header-text">
+        <h1>Trusted Senior Moves</h1>
+        <p>Helping seniors and families make the next move with confidence.</p>
+      </div>
+    </div>
+  </header>
 
   <main>
     <div class="card">
-  <h2>Free Guide: 5 Steps to a Smooth Home Transition for Seniors</h2>
-  <p class="lead">
-    Moving a loved one from their longtime home can feel overwhelming.
-    This short guide focuses on practical steps for preparing and selling a home
-    with care and confidence — without making recommendations about senior living facilities.
-  </p>
+      <h2>Free Guide: 5 Steps to a Smooth Home Transition for Seniors</h2>
+      <p class="lead">
+        Moving a loved one from their longtime home can feel overwhelming.
+        This short guide focuses on practical steps for preparing and selling a home
+        with care and confidence.
+      </p>
 
-  <ul>
-    <li>✅ How to prepare emotionally and financially for a move</li>
-    <li>✅ Checklist for getting a senior’s home market-ready</li>
-    <li>✅ Organizing and downsizing belongings respectfully</li>
-    <li>✅ Local resources for moving and estate services</li>
-    <li>✅ Planning the timeline and next living arrangements with family</li>
-  </ul>
+      <ul>
+        <li>✅ How to prepare emotionally and financially for a move</li>
+        <li>✅ Checklist for getting a senior's home market-ready</li>
+        <li>✅ Organizing and downsizing belongings respectfully</li>
+        <li>✅ Local resources for moving and estate services</li>
+        <li>✅ Planning the timeline and next living arrangements with family</li>
+      </ul>
 
-  <!-- Simple mailto “button” -->
-  <p>
-    <a href="mailto:info@trustedseniormoves.com?subject=Free%20Transition%20Guide&body=Please%20send%20me%20the%20guide"
-       style="display:inline-block;background:#283e62;color:#fff;padding:12px 20px;border-radius:6px;
-              font-size:16px;text-decoration:none;">
-      Send Me the Free Guide
-    </a>
-  </p>
+      <p>
+        <a href="mailto:info@trustedseniormoves.com?subject=Free%20Transition%20Guide&body=Please%20send%20me%20the%20guide" 
+           class="cta-button"
+           aria-label="Request free transition guide via email">
+          Send Me the Free Guide
+        </a>
+      </p>
 
-  <p style="font-size:14px;color:#777;margin-top:10px;">
-    *No spam, ever. We’ll email you a link to download the free PDF guide.
-  </p>
-</div>
+      <p class="disclaimer">
+        *No spam, ever. We'll email you a link to download the free PDF guide.
+      </p>
+    </div>
+
+    <!-- About Tiffany Section -->
+    <div class="card">
+      <h2>About Tiffany</h2>
+      <p class="lead">
+        As a dedicated Space Coast Realtor serving the Central Florida area for over 4 years, 
+        Tiffany brings both expertise and heart to every family transition.
+      </p>
+      <p>
+        Tiffany understands that selling a senior's home is more than just a real estate transaction—it's 
+        a deeply personal journey filled with memories, emotions, and important decisions. Her passionate 
+        and compassionate approach ensures that families feel supported every step of the way.
+      </p>
+      <p>
+        With years of experience helping families navigate these sensitive transitions, Tiffany provides 
+        the guidance, resources, and care needed to make the process as smooth and stress-free as possible.
+      </p>
+    </div>
   </main>
 
   <footer>
-    © 2025 Trusted Senior Moves. All rights reserved.
+    <p>© 2025 Trusted Senior Moves. All rights reserved.</p>
+    <p style="margin-top: 8px;">
+      <a href="mailto:info@trustedseniormoves.com">Contact Us</a>
+    </p>
   </footer>
 </body>
 </html>
+
 
